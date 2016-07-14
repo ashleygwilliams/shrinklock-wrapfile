@@ -1,0 +1,23 @@
+{
+  "name": "shrinklock-wrapfile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start" : "live-server ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashleygwilliams/shrinklock-wrapfile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ashleygwilliams/shrinklock-wrapfile/issues"
+  },
+  "homepage": "https://github.com/ashleygwilliams/shrinklock-wrapfile#readme",
+  "description": "",
+  "dependencies": {
+    "live-server": "^1.0.0"
+  }
+}
