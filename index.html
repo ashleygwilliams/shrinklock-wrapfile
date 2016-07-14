@@ -10,92 +10,92 @@
 
 class: center, middle
 
-![](public/img/01.JPG)
+![shrinklock wrapfile with ruby & node.js icons](public/img/01.JPG)
 
 ---
 class: center, middle
 
-![](public/img/02.JPG)
+![Assumption: local, testing, staging, and production should all be the same](public/img/02.JPG)
 
 ---
 class: center, middle
 
-![](public/img/03.JPG)
+![Ruby's dependency hell: What dependencies does my app have? What version of each dependency?](public/img/03.JPG)
 
 ---
 class: center, middle
 
-![](public/img/04.JPG)
+![Ruby's solution: Bundler. List the dependencies you need, specify versions, keep track of the versions you use.](public/img/04.JPG)
 
 ---
 class: center, middle
 
-![](public/img/05.JPG)
+![How Bunlder works: App has gemfile, gemfile specifices dependencies with version ranges, gemfile.lock records dependencies with exact versions installed.](public/img/05.JPG)
 
 ---
 class: center, middle
 
-![](public/img/06.JPG)
+![With the setup from the previous slide, the developer knows what deps they need, at what versions, and can therefor easily reproduce their build.](public/img/06.JPG)
 
 ---
 class: center, middle
 
-![](public/img/07.JPG)
+![Node's dependency hell: Two dependencies ("A" and "B") depend on transient dependency "C," but at different versions. Which version should NPM install?](public/img/07.JPG)
 
 ---
 class: center, middle
 
-![](public/img/08.JPG)
+![Node's solution: NPM (and the node module loader). Load multiple versions of one dep, nest them as deps of deps.](public/img/08.JPG)
 
 ---
 class: center, middle
 
-![](public/img/09.JPG)
+![Ruby Bundler does not allow for multiple versions of one dependency, Node NPM does](public/img/09.JPG)
 
 ---
 class: center, middle
 
-![](public/img/10.JPG)
+![How npm works: package.json specifies dependencies, they are installed to node_modules directory. Maybe other stuff happens too...](public/img/10.JPG)
 
 ---
 class: center, middle
 
-![](public/img/11.JPG)
+![The system in the previous slide tells what dependencies an application needs, but not what versions are needed. Reproducing the build is not possible without the latter information.](public/img/11.JPG)
 
 ---
 class: center, middle
 
-![](public/img/12.JPG)
+![NPM is a bet on semver. So exact version shouldn't matter (emphasis on "shouldn't").](public/img/12.JPG)
 
 ---
 class: center, middle
 
-![](public/img/13.JPG)
+![Node's dependency hell (part deux): App requires dependencies "A" "B" and "C." B and C have their own dependencies, which in turn have their own dependencies. What version should be installed & how are version conflicts resolved?](public/img/13.JPG)
 
 ---
 class: center, middle
 
-![](public/img/14.JPG)
+![NPM's solution: Shrinkwrap. Shrinkwrap file records exact installed versions (like gemfile.lock)](public/img/14.JPG)
 
 ---
 class: center, middle
 
-![](public/img/15.JPG)
+![How Shrinkwrap works: 1. Specify dependencies in package.json 2. install with "npm install" 3. node_modules now contains all deps & their deps 4. run "npm shrinkwrap" 5. npm-shrinkwrap.json now contains information on every installed dependency by exact version.](public/img/15.JPG)
 
 ---
 class: center, middle
 
-![](public/img/16.JPG)
+![With shrinkwrap, we know what deps we need, what versions we need, and we can reproduce our build.](public/img/16.JPG)
 
 ---
 class: center, middle
 
-![](public/img/17.JPG)
+![Users have many questions: "What is shrinkwrap? How do I fix bugs I encounter when using shrinkwrap? When do I run shrinkwrap? When do I update the shrinkwrap file? How is it used?"](public/img/17.JPG)
 
 ---
 class: center, middle
 
-![](public/img/18.JPG)
+![Browsers present their own challenges: 1. How do we load two different versions of a dependency? How do we minimize duplication of code loaded on the page? Recursive dependencies are complicated in this context.](public/img/18.JPG)
 
    </textarea>
     <script src="public/remark.js" type="text/javascript">
